@@ -15,51 +15,52 @@
 `Get-Command`
 
 ### Print text from a file <i>cat </i>
-Get-content FILE
+`Get-content FILE`
 gc FILE
 
-###top 10 lines <i> head</i>
-gc log.txt | select -first 10 # head
-gc -TotalCount 10 log.txt     # also head
-Get-Content -head 2
+### Top 10 lines <i> head</i>  
+`gc log.txt | select -first 10`   
+`gc -TotalCount 10 log.txt`     
+`Get-Content -head 2`  
 
-## Last 10 lines <i> tail</i>
-gc log.txt | select -last 10  # tail
-gc -Tail 10 log.txt           # also tail
-Get-Content -Tail 2
+### Last 10 lines <i> tail</i>  
+`gc log.txt | select -last 10` 
+`gc -Tail 10 log.txt`           
+`Get-Content -Tail 2`
 
-## Search string in a file <i>grep </i>
-Select-String -match 
+### Search string in a file <i>grep </i>  
+`Select-String -match `  
 
-## Sorting file <i>sort </i> 
-Sort-Object
-## Unique lines <i>uniq </i> 
-Select-Object -Unique
-Get-Unique
+### Sorting file <i>sort </i> 
+`Sort-Object `
+### Unique lines <i>uniq </i>   
+`Select-Object -Unique`  
+`Get-Unique`  
 		
-## cut -f 1 | head
-gc .\7-specific-changes.genes.txt | %{$_.Split("`t")[0]} | select -first 10
+### <i>cut -f 1 | head</i>
+`gc .\7-specific-changes.genes.txt | %{$_.Split("`t")[0]} | select -first 10`
 
-## wc 
+### Word counts <i>wc </i>
 gc FILE | Measure-Object –Word 
-## wc -l
-gc FILE | Measure-Object –Line
-## the number of characters
-Get-Content C:\fso\a.txt | Measure-Object -Character
+### 
+### Line counts <i>wc -l </i>
+`gc FILE | Measure-Object –Line` 
+### The number of characters
+`Get-Content C:\fso\a.txt | Measure-Object -Character`
 
 
-file = Get-Item
+file = Get-Item  
 
-cat = Get-Content
-find . -name \*.xyz -exec rm {} \;
+cat = Get-Content  
+find . -name \*.xyz -exec rm {} \;  
 
 
-Get-Item
-$(Get-Item C:\SampleDirectory).lastaccesstime
-Get-Service
-Get-Process
-Start-Process, Stop-Process
-remove-item
+Get-Item  
+$(Get-Item C:\SampleDirectory).lastaccesstime  
+Get-Service  
+Get-Process  
+Start-Process, Stop-Process  
+remove-item  
 
 
 
